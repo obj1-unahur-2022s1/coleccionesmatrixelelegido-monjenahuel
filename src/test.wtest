@@ -1,0 +1,22 @@
+import matrix.*
+
+describe "Test de Neo"{
+
+	test "Neo es el elegido"{
+		assert.that(neo.esElegido())
+	}
+	test "Neo salta vitalidad baja"{
+		neo.saltar()
+		assert.equals(5,neo.vitalidad())
+	}
+}
+describe "Test de Morfeo"{
+	test "Mofeo no es el elegido"{
+		assert.notThat(morfeo.esElegido())
+	}	
+	test "Morfeo salta y controla vitalidad"{
+		morfeo.saltar()
+		assert.equals(7,morfeo.vitalidad())
+		
+	}
+}
